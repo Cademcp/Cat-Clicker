@@ -5,17 +5,33 @@
     <title>Cat Clicker</title>
 </head>
 <body>
-<img src="cat_img.jpg" id="cat">
-<p id="counter"></p>
+<h2 id="cat1name"></h2>
+<img src="cat_img.jpg" id="cat1">
+<p id="counter1"></p>
+
+<h2 id="cat2name"></h2>
+<img src="cat2.jpg" id="cat2">
+<p id="counter2"></p>
 <script>
-    var elem = document.getElementById('cat');
-    var counter = 0;
-    elem.addEventListener('click', function(){
+    var firstCat = document.getElementById('cat1');
+    var firstCatName = "Timmy";
+    var counter1 = 0;
+    document.getElementById("cat1name").innerHTML = firstCatName;
+    firstCat.addEventListener('click', function(){
         //the element has been clicked... do stuff here
-        counter += 1;
-        document.getElementById("counter").innerHTML = "The cat has been clicked " + counter + " times!";
+        counter1 += 1;
+        document.getElementById("counter1").innerHTML = firstCatName + " has been clicked " + counter1 + " times!";
+
     }, false);
 
+    var secondCat = document.getElementById('cat2');
+    var secondCatName = "Johnathan";
+    var counter2 = 0;
+    document.getElementById("cat2name").innerHTML = secondCatName;
+    secondCat.addEventListener('click', function(){
+        counter2 += 1;
+        document.getElementById("counter2").innerHTML = secondCatName + " has been clicked " + counter2 + " times!";
+    })
 
 </script>
 
